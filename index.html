@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang mở Minecraft...</title>
+    <meta name="robots" content="noindex"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            color: #333;
+        }
+    </style>
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <p>Nếu ứng dụng không tự mở, vui lòng nhấn vào liên kết bên dưới:</p>
+    
+    <a id="serverLink" href="#" style="font-size: 18px; color: #007bff; text-decoration: none;">Đang tải...</a>
+
+    <script>
+        const encodedServerInfo = "U2VydmVyJT IwTWluZWNyYWZ0JTIwQ+G7p2ElMjBI4buZaSUyMEJ1Y3V8NDUuMTE3LjE2NC4xMzc6MjUzNzM=";
+        const decodedServerInfo = atob(encodedServerInfo);
+        const minecraftUrl = `minecraft:?addExternalServer=${decodedServerInfo}`;
+        const parts = decodedServerInfo.split('|')[1].split(':');
+        const displayIP = parts[0];
+        const displayPort = parts[1];
+
+        const linkElement = document.getElementById('serverLink');
+        linkElement.href = minecraftUrl;
+        linkElement.textContent = `Nhấp để thêm server ${displayIP}:${displayPort}`;
+        window.location.replace(minecraftUrl);
+    </script>
+</body>
+</html>
