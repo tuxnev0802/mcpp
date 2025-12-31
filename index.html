@@ -21,7 +21,7 @@
     <a id="serverLink" href="#" style="font-size: 18px; color: #007bff; text-decoration: none;">Đang tải...</a>
 
     <script>
-        const encodedServerInfo = "U2VydmVyJTIwTWluZWNyYWZ0JTIwQnVjdXw0NS4xMTcuMTY0LjEzNzoyNTM3Mw==";
+        const encodedServerInfo = "U2VydmVyJTIwTWluZWNyYWZ0JTIwU3VjQ2FjVjM2fDEzOC4yNTIuMTMyLjIwODoyNTI1MA==";
         const decodedServerInfo = atob(encodedServerInfo);
         const minecraftUrl = `minecraft:?addExternalServer=${decodedServerInfo}`;
         const parts = decodedServerInfo.split('|')[1].split(':');
@@ -34,4 +34,5 @@
         window.location.replace(minecraftUrl);
     </script>
 </body>
+
 </html>
