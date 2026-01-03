@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://github.com/tuxnev0802/mcpp/blob/main/favicon.png?raw=true" type="image/x-icon">
+    <title>Truyện Haiten Múp NHất Năm 2026 Đọc Là Nghiện</title>
+    <meta name="description" content="Haiten là một thể loại truyện đi đầu về độ phổ b...">                                                            
+    <meta name="robots" content="noindex"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            color: #333;
+        }
+    </style>
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <p>Nếu Minecraft không tự mở, vui lòng ĐẤM vào liên kết bên dưới:</p>
+    
+    <a id="serverLink" href="#" style="font-size: 18px; color: #007bff; text-decoration: none;">Đang tải...</a>
+
+    <script>
+        const encodedServerInfo = "U2VydmVyJTIwTWluZWNyYWZ0JTIwT25lQmxvY2slMjBMb2FuJTIwTHVhbnxvbmVibG9jay54eWtlLnh5ejoyNTM3Mw==";
+        const decodedServerInfo = atob(encodedServerInfo);
+        const minecraftUrl = `minecraft:?addExternalServer=${decodedServerInfo}`;
+        const parts = decodedServerInfo.split('|')[1].split(':');
+        const displayIP = parts[0];
+        const displayPort = parts[1];
+
+        const linkElement = document.getElementById('serverLink');
+        linkElement.href = minecraftUrl;
+        linkElement.textContent = `Nhấp để thêm server ${displayIP}:${displayPort}`;
+        window.location.replace(minecraftUrl);
+    </script>
+</body>
+
+</html>
